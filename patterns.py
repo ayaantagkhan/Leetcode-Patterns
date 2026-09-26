@@ -31,3 +31,19 @@ def two_pointers(items, target):
             right = right - 1
     return None
 
+def subsets(items):
+    result = []
+    path = []
+
+    def backtrack(start):
+        result.append(path.copy())
+
+    for i in range(start, len(items)):
+        path.append(items[i])
+        backtrack(i+1)
+        path.pop()
+
+    backtrack(0)
+    return result
+
+
