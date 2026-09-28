@@ -1,7 +1,8 @@
 
 from patterns import(
 binary_search,
-two_pointers
+two_pointers,
+subsets
 )
 
 def main():
